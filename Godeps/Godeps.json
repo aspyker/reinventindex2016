@@ -1,0 +1,73 @@
+{
+	"ImportPath": "github.com/aspyker/reinventindex2016",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v75",
+	"Deps": [
+		{
+			"ImportPath": "github.com/cbroglie/mustache",
+			"Rev": "6857e4b493bdb8d4b1931446eb41704aeb4c28cb"
+		},
+		{
+			"ImportPath": "github.com/moovweb/gokogiri",
+			"Comment": "4.8.28-35-geafc181",
+			"Rev": "eafc181356de1da75468a7bdf54b430393f9c0e3"
+		},
+		{
+			"ImportPath": "github.com/moovweb/gokogiri/help",
+			"Comment": "4.8.28-35-geafc181",
+			"Rev": "eafc181356de1da75468a7bdf54b430393f9c0e3"
+		},
+		{
+			"ImportPath": "github.com/moovweb/gokogiri/html",
+			"Comment": "4.8.28-35-geafc181",
+			"Rev": "eafc181356de1da75468a7bdf54b430393f9c0e3"
+		},
+		{
+			"ImportPath": "github.com/moovweb/gokogiri/util",
+			"Comment": "4.8.28-35-geafc181",
+			"Rev": "eafc181356de1da75468a7bdf54b430393f9c0e3"
+		},
+		{
+			"ImportPath": "github.com/moovweb/gokogiri/xml",
+			"Comment": "4.8.28-35-geafc181",
+			"Rev": "eafc181356de1da75468a7bdf54b430393f9c0e3"
+		},
+		{
+			"ImportPath": "github.com/moovweb/gokogiri/xpath",
+			"Comment": "4.8.28-35-geafc181",
+			"Rev": "eafc181356de1da75468a7bdf54b430393f9c0e3"
+		},
+		{
+			"ImportPath": "github.com/seanwatson/go-slideshare",
+			"Rev": "bdb61175614837095b850e6ae4af2a689af7c5af"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "45e771701b814666a7eb299e6c7a57d0b1799e91"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context/ctxhttp",
+			"Rev": "45e771701b814666a7eb299e6c7a57d0b1799e91"
+		},
+		{
+			"ImportPath": "google.golang.org/api/gensupport",
+			"Rev": "55146ba61254fdb1c26d65ff3c04bc1611ad73fb"
+		},
+		{
+			"ImportPath": "google.golang.org/api/googleapi",
+			"Rev": "55146ba61254fdb1c26d65ff3c04bc1611ad73fb"
+		},
+		{
+			"ImportPath": "google.golang.org/api/googleapi/internal/uritemplates",
+			"Rev": "55146ba61254fdb1c26d65ff3c04bc1611ad73fb"
+		},
+		{
+			"ImportPath": "google.golang.org/api/googleapi/transport",
+			"Rev": "55146ba61254fdb1c26d65ff3c04bc1611ad73fb"
+		},
+		{
+			"ImportPath": "google.golang.org/api/youtube/v3",
+			"Rev": "55146ba61254fdb1c26d65ff3c04bc1611ad73fb"
+		}
+	]
+}

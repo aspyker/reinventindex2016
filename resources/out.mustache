@@ -1,0 +1,17 @@
+<table>
+{{#Sessions}}
+ <tr>
+  <td>
+    <b>{{SessionId}} - {{Title}}</b>
+  </td>
+  <td align="right" width="90">{{#SlideshareUrl}}
+    <a href="{{SlideshareUrl}}" imageanchor="1"><img border="0" height="34" width="34" src="https://lh3.googleusercontent.com/-8tZrYHZEF1k/Up3UN24fSVI/AAAAAAAAVVQ/VGODHwz2yyg/s34-no/slideshare.png" /></a>{{/SlideshareUrl}}{{^SlideshareUrl}}{{/SlideshareUrl}}
+{{#YoutubeUrl}}
+    <a href="{{YoutubeUrl}}" imageanchor="1"><img border="0" height="32" width="50" src="https://lh4.googleusercontent.com/-RqHI2jPZGAA/Up3UNzvSGcI/AAAAAAAAVVU/PXFZQL-Wo00/w50-h32-no/youtube.jpg" /></a>{{/YoutubeUrl}}{{^YoutubeUrl}}{{/YoutubeUrl}}
+  </td>
+ </tr>
+ <tr>
+  <td colspan=2 style="padding-left:20px; padding-bottom:10px; font-size:x-small;">{{Abstract}}</td>
+ </tr>
+{{/Sessions}}
+</table>
