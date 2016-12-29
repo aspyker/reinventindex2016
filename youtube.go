@@ -6,6 +6,7 @@ import (
 	"google.golang.org/api/googleapi/transport"
 	youtube "google.golang.org/api/youtube/v3"
 	"fmt"
+	"strings"
 )
 
 // basically does:
@@ -25,18 +26,14 @@ func searchOnChannelByKeyword(channelId string, keyword string, developerKey str
 		Q(keyword).
 		MaxResults(10)
 
-	//log.Printf("about to search youtube for \"%s\"", keyword)
-
 	response, err := call.Do()
 	if err != nil {
 		log.Fatalf("Error making search API call: %v", err)
 	}
-	//log.Printf("youtube results len %v", len(response.Items))
 
 	if len(response.Items) != 0 {
 		for _, item := range response.Items {
-			switch item.Id.Kind {
-			case "youtube#video":
+			if (item.Id.Kind == "youtube#video" && strings.Contains(item.Snippet.Title, keyword)) {
 				url = fmt.Sprintf("https://www.youtube.com/watch?v=%s", item.Id.VideoId)
 				break
 			}

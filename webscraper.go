@@ -14,7 +14,7 @@ func parse(trackAbbrev string) ([]Session) {
 
 	input, err := ioutil.ReadFile(fmt.Sprintf("resources/%s.html", trackAbbrev))
 	if err != nil {
-		log.Fatalf("error reading file")
+		log.Fatalf("error reading file %s", trackAbbrev)
 	}
 
 	xml, err := gokogiri.ParseXml(input)
@@ -56,6 +56,10 @@ func parse(trackAbbrev string) ([]Session) {
 		} else {
 			firstAbbreviation := strings.TrimSpace(abbreviations[0].Content())
 			session.SessionId = strings.Split(firstAbbreviation, " ")[0]
+		}
+		if (strings.Contains(session.SessionId, "-R")) {
+			log.Printf("skipping repeat session %s", session.SessionId)
+			continue
 		}
 
 		abstracts, err2 := div.Search(xp4)

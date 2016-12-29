@@ -5,6 +5,7 @@ import (
 	"log"
 	"github.com/cbroglie/mustache"
 	"fmt"
+	"encoding/json"
 )
 
 type Session struct {
@@ -23,7 +24,7 @@ type AllSessions struct {
 const amazonWebServicesChannelExternalId = "UCd6MoB9NC6uYN2grvUNT-Zg"
 const awsSlideShareUsername = "AmazonWebServices"
 
-var tracks = [...]string{"ALX"}//, "ARC", "BDA", "BDM", "BAP", "CMP", "CON", "CTD", "DAT", "DSC", "DEV", "ENT",
+var tracks = [...]string{"ALX", "ARC", "BDA", "BDM", "BAP", "CMP", "CON", "CTD", "DAT", "DCS", "DEV", "ENT"}//,
 //	"FIN", "GAM", "HLC", "IOT", "LFS", "MAC", "MAE", "MBL", "NET", "SAC", "SEC", "SVR", "STG", "WIN", "WWPS"}
 
 func main() {
@@ -53,6 +54,9 @@ func main() {
 	}
 
 	mustacheSessions := AllSessions{Sessions: sessions}
+
+	b, _ := json.Marshal(mustacheSessions)
+	fmt.Println(string(b))
 
 	output, err := mustache.RenderFile("resources/out.mustache", mustacheSessions)
 	if err != nil {
