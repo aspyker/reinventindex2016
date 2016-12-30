@@ -24,8 +24,8 @@ type AllSessions struct {
 const amazonWebServicesChannelExternalId = "UCd6MoB9NC6uYN2grvUNT-Zg"
 const awsSlideShareUsername = "AmazonWebServices"
 
-var tracks = [...]string{"ALX", "ARC", "BDA", "BDM", "BAP", "CMP", "CON", "CTD", "DAT", "DCS", "DEV", "ENT"}//,
-//	"FIN", "GAM", "HLC", "IOT", "LFS", "MAC", "MAE", "MBL", "NET", "SAC", "SEC", "SVR", "STG", "WIN", "WWPS"}
+var tracks = [...]string{"ALX", "ARC", "BDA", "BDM", "BAP", "CMP", "CON", "CTD", "DAT", "DCS", "DEV", "ENT",
+	"FIN", "GAM", "HLC", "IOT", "LFS", "MAC", "MAE", "MBL", "NET", "SAC", "SEC", "SVR", "STG", "WIN", "WWPS"}
 
 func main() {
 	var sessions []Session
@@ -41,6 +41,8 @@ func main() {
 	ytDevKey := os.Getenv("YOUTUBE_DEVKEY")
 	ssApiKey := os.Getenv("SLIDESHARE_APIKEY")
 	ssSecret := os.Getenv("SLIDESHARE_SECRET")
+
+	cacheSlideSharesByUsername(awsSlideShareUsername, ssApiKey, ssSecret)
 
 	for sessionIndex, session := range sessions {
 		slideShowUrl := searchOnUserForKeyword(awsSlideShareUsername, session.SessionId, ssApiKey, ssSecret)
